@@ -1,0 +1,45 @@
+{
+    "mcpServers": {
+
+      "sequential-thinking": {
+          "_comment1": "顺序思考",
+          "command": "cmd",
+          "args": [
+            "/c",
+            "npx",
+            "@modelcontextprotocol/server-sequential-thinking"
+          ]
+      },
+
+
+      "memory": {
+          "_comment2": "记忆",
+          "command": "cmd",
+          "args": [
+            "/c",
+            "npx",
+            "@modelcontextprotocol/server-memory"
+          ],
+          "env": {
+            "MEMORY_FILE_PATH": "E:\\AI-Project\\memory.json"
+          }
+        },
+
+
+      "filesystem": {
+          "_comment3": "文件系统",
+          "command": "cmd",
+          "args": [
+            "/c",
+            "npx",
+            "@modelcontextprotocol/server-filesystem",
+            "E:\\AI-Project",
+            "E:\\D"
+          ]
+      }
+
+
+
+    }
+  }
+
