@@ -1,45 +1,72 @@
 {
-    "mcpServers": {
+  "mcpServers": {
 
-      "sequential-thinking": {
-          "_comment1": "顺序思考",
-          "command": "cmd",
-          "args": [
-            "/c",
-            "npx",
-            "@modelcontextprotocol/server-sequential-thinking"
-          ]
-      },
+    "// AI处理功能":{},
 
+    "sequential-thinking": {
+      "comment": "顺序思考处理模块",
+      "command": "cmd",
+      "args": ["/c", "npx", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "think-mcp-server": {
+      "comment": "高级思维处理服务",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@PhillipRt/think-mcp-server", "--key", "{替换为你的KeyID}"]
+    },
 
-      "memory": {
-          "_comment2": "记忆",
-          "command": "cmd",
-          "args": [
-            "/c",
-            "npx",
-            "@modelcontextprotocol/server-memory"
-          ],
-          "env": {
-            "MEMORY_FILE_PATH": "E:\\AI-Project\\memory.json"
-          }
-        },
+    "//核心功能服务":{},
 
+    "jsontool": {
+      "comment": "JSON数据处理工具",
+      "command": "cmd",
+      "args": ["/c", "npx", "@gongrzhe/server-json-mcp@1.0.3"]
+    },
+    "time-mcp": {
+      "comment": "时间服务接口",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@yokingma/time-mcp", "--key", "{替换为你的KeyID}"]
+    },
 
-      "filesystem": {
-          "_comment3": "文件系统",
-          "command": "cmd",
-          "args": [
-            "/c",
-            "npx",
-            "@modelcontextprotocol/server-filesystem",
-            "E:\\AI-Project",
-            "E:\\D"
-          ]
-      }
+    "// 存储相关服务":{},
 
+    "AI Memory": {
+      "comment": "AI记忆存储服务",
+      "name": "AI Memory",
+      "url": "http://localhost:7331/sse"
+    },
+    "memory": {
+      "comment": "本地记忆存储系统",
+      "command": "cmd",
+      "args": ["/c", "npx", "@modelcontextprotocol/server-memory"],
+      "env": {"MEMORY_FILE_PATH": "E:\\AI-Project\\memory.json"}
+    },
 
+    "// 文件操作":{},
 
+    "mcp-file-context-server": {
+      "comment": "文件上下文服务",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@bsmi021/mcp-file-context-server", "--key", "{替换为你的KeyID}"]
+    },
+    "filesystem": {
+      "comment": "基础文件系统服务",
+      "command": "cmd",
+      "args": ["/c", "npx", "@modelcontextprotocol/server-filesystem", "E:\\AI-Project", "E:\\AI-Project\\", "E:\\D"]
+    },
+
+    "// 第三方服务集成":{},
+
+    "mcp-tavily": {
+      "comment": "Tavily搜索服务集成",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "mcp-tavily", "--key", "{替换为你的KeyID}"]
+    },
+    "github": {
+      "comment": "GitHub集成服务",
+      "command": "cmd",
+      "args": ["/c", "npx", "@modelcontextprotocol/server-github"],
+      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "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"}
     }
-  }
 
+  }
+}
