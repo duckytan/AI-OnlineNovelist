@@ -65,7 +65,7 @@
       "comment": "GitHub集成服务",
       "command": "cmd",
       "args": ["/c", "npx", "@modelcontextprotocol/server-github"],
-      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "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"}
+      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "{替换为你的GitHub令牌}"}
     }
 
   }
