@@ -11,7 +11,7 @@
     "think-mcp-server": {
       "comment": "高级思维处理服务",
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@PhillipRt/think-mcp-server", "--key", "{替换为你的KeyID}"]
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@PhillipRt/think-mcp-server", "--key", "${SMITHERY_API_KEY}"]
     },
 
     "//核心功能服务":{},
@@ -24,7 +24,7 @@
     "time-mcp": {
       "comment": "时间服务接口",
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@yokingma/time-mcp", "--key", "{替换为你的KeyID}"]
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@yokingma/time-mcp", "--key", "${SMITHERY_API_KEY}"]
     },
 
     "// 存储相关服务":{},
@@ -46,7 +46,7 @@
     "mcp-file-context-server": {
       "comment": "文件上下文服务",
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@bsmi021/mcp-file-context-server", "--key", "{替换为你的KeyID}"]
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@bsmi021/mcp-file-context-server", "--key", "${SMITHERY_API_KEY}"]
     },
     "filesystem": {
       "comment": "基础文件系统服务",
@@ -59,13 +59,13 @@
     "mcp-tavily": {
       "comment": "Tavily搜索服务集成",
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "mcp-tavily", "--key", "{替换为你的KeyID}"]
+      "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "mcp-tavily", "--key", "${SMITHERY_API_KEY}"]
     },
     "github": {
       "comment": "GitHub集成服务",
       "command": "cmd",
       "args": ["/c", "npx", "@modelcontextprotocol/server-github"],
-      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "{替换为你的GitHub令牌}"}
+      "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"}
     }
 
   }
